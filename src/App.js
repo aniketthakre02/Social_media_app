@@ -20,10 +20,12 @@ function Layout(){
   return(
     <div>
       <NavBar/>
-      <div>
-        <RightBar/>
-        <Outlet/>
+      <div style={{display:'flex'}}>
         <LeftBar/>
+        <div style={{flex:6}}>
+        <Outlet/>
+        </div>
+        <RightBar/>
       </div>
     </div>
   )
