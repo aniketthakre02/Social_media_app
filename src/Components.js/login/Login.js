@@ -1,8 +1,7 @@
-import {useState, useEffect} from "react";
+import { Link } from "react-router-dom"
 import "./login.scss"
  
 export default function Login(){
-
     return(
         <div className="login">
             <div className="card">
@@ -12,7 +11,10 @@ export default function Login(){
                     where every moment becomes a story, and every connection is a new adventure.<br/>
                      Join us and make your mark in the digital socialscape."</p>
                      <span>Don't you have account?</span>
+                     <Link to="/register">
                      <button>Register</button>
+                     </Link>
+                     
             </div>
             <div className="right">
                 <h1>Login</h1>
