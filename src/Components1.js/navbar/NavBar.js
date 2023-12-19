@@ -14,7 +14,7 @@ export default function navBar(){
     return(
         <div className="navbar">
             <div className="left">
-                <p> AT SOCIAL</p>    
+                <p>ATSOCIAL</p>    
                 <HomeIcon/>
                 <NightlightIcon/>
                 <GridViewOutlinedIcon/>

@@ -31,12 +31,13 @@ function Layout(){
   )
 }
 
+
 function App() {
   const router=createBrowserRouter([
     {
       path: "/",
       element: (
-          <Layout />
+          <Layout/>
       ),
       children: [
         {
