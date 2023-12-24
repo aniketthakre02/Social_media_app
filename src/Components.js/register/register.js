@@ -12,7 +12,7 @@ export default function Register(){
                     where every moment becomes a story, and every connection is a new adventure.<br/>
                      Join us and make your mark in the digital socialscape."</p>
                      <span>Do you have an account?</span>
-                     <Link to="/login">
+                     <Link to="/">
                      <button>Login</button>  
                      </Link>
              </div>

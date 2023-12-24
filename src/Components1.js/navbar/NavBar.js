@@ -8,9 +8,16 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { useState } from "react";
+import Logout from "../logout/Logout";
 
 
-export default function navBar(){
+export default function NavBar(){
+     const [showOptions, setShowOptions] = useState(false);
+
+     const handleIconClick = () => {
+     setShowOptions(!showOptions);
+     };
     return(
         <div className="navbar">
             <div className="left">
@@ -27,11 +34,12 @@ export default function navBar(){
                 <PersonOutlinedIcon/>
                 <EmailOutlinedIcon/>
                 <NotificationsOutlinedIcon/>
-                <div className="user">
+                <div className="user" onClick={handleIconClick}>
                     <AccountCircleIcon/>
                     <span>Aniket Thakre</span>
                 </div>
             </div>
+            {showOptions && <Logout/>}
         </div>
     )
 }

@@ -23,7 +23,7 @@ function Layout(){
       <div style={{display:'flex'}}>
         <LeftBar/>
         <div style={{flex:6}}>
-        <Outlet/>
+        <Home/>
         </div>
         <RightBar/>
       </div>
@@ -34,35 +34,42 @@ function Layout(){
 
 function App() {
   const router=createBrowserRouter([
+    // {
+    //   path: "/",
+    //   element: (
+    //       <Layout/>
+    //   ),
+    //   children: [
+    //     {
+    //       path: "/",
+    //       element: <Home/>,
+    //     },
+    //     {
+    //       path: "/profile/:id",
+    //       element: <Profile />,
+    //     },
+    //   ],
+    // },
     {
-      path: "/",
-      element: (
-          <Layout/>
-      ),
-      children: [
-        {
-          path: "/",
-          element: <Home/>,
-        },
-        {
-          path: "/profile/:id",
-          element: <Profile />,
-        },
-      ],
-    },
-    {
-      path:"/login",
+      path:"/",
       element:<Login/>
     },
     {
-      path:"register",
+      path:"/register",
       element:<Register/>
+    },
+    {
+      
+        path:"/home",
+        element:<Home/>
     }
   ])
   return (
     <div >
-    {/* <RouterProvider router={router}/> */}
-    <Layout/>
+    <RouterProvider router={router}/>
+  {/* <Layout/> */}
+    {/* <Register/> */}
+    {/* <Login/> */}
     </div>
   );  
 }

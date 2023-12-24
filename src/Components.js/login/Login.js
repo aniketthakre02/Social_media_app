@@ -13,8 +13,7 @@ export default function Login(){
                      <span>Don't you have account?</span>
                      <Link to="/register">
                      <button>Register</button>
-                     </Link>
-                     
+                     </Link>                     
             </div>
             <div className="right">
                 <h1>Login</h1>
@@ -22,7 +21,9 @@ export default function Login(){
                     <input type="text" placeholder="UserName"/>
                     <input type="text" placeholder="Password"/>
                 </form>
+                <Link to="/home">
                 <button>Login</button>
+                </Link>
             </div>
 
             </div>
