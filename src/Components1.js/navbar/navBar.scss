@@ -15,12 +15,7 @@
         align-items:center;
         gap:20px;
         P{
-            font-size: 20px;
-            font-family:cursive ;
-            textColorSoft:#555;
-            font-weight:bold;
-            color: darkblue;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            
         }
         .search{
             display: flex;
@@ -37,6 +32,15 @@
         }
         
     }
+    .center{
+        font-size: 30px;
+            font-family:cursive ;
+            textColorSoft:#555;
+            font-weight:bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+    }
     .right{
         display: flex;
         align-items: center;
@@ -47,6 +51,9 @@
             gap:5px;
             font-weight: 500;
             cursor:pointer;
+            &:hover {
+                transform: scale(1.05);
+              }
         }
        
     }

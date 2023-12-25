@@ -7,6 +7,7 @@ import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { useState } from "react";
 import Comments from "../comments/Comments";
+import {Link} from "react-router-dom";
 
 export default function Post({post}){
     const [commentOpen,setCommentOpen]=useState(false);
@@ -18,8 +19,11 @@ export default function Post({post}){
                     <div className="userInfo">
                     <img src={post.profilePic} alt=""/>
                     <div className="details">
-
+                    <Link
+                to={`/profile/${post.userId}`}
+                style={{ textDecoration: "none", color: "inherit" }}  >       
                     <span className="name">{post.name}</span>
+                    </Link>
                     <span className="date">1 min ago</span>
                     </div>
                 </div>

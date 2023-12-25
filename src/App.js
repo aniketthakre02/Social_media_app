@@ -14,6 +14,8 @@ import RightBar from './Components1.js/rightbar/RightBar';
 import LeftBar from './Components1.js/leftbar/LeftBar';
 import Home from './Components.js/home/Home';
 import Profile from './Components.js/profile/Profile';
+import SetProfile from './Components.js/profile/SetProfile';
+
 
 
 function Layout(){
@@ -62,6 +64,10 @@ function App() {
       
         path:"/home",
         element:<Home/>
+    },
+    {
+      path:"/profile/:id",
+      element:<SetProfile/>
     }
   ])
   return (

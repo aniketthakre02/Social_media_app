@@ -14,14 +14,21 @@ import Logout from "../logout/Logout";
 
 export default function NavBar(){
      const [showOptions, setShowOptions] = useState(false);
+     const [position, setPosition] = useState({ top: 0, right: 0 });
 
-     const handleIconClick = () => {
-     setShowOptions(!showOptions);
+     const handleIconClick = (event) => {
+        const iconRect = event.target.getBoundingClientRect();
+        const newPosition = {
+          top: iconRect.bottom + window.scrollY,
+          left: iconRect.left + window.scrollX,
+        };
+    
+        setShowOptions(!showOptions);
+        setPosition(newPosition);
      };
     return(
         <div className="navbar">
-            <div className="left">
-                <p>ATSOCIAL</p>    
+            <div className="left">  
                 <HomeIcon/>
                 <NightlightIcon/>
                 <GridViewOutlinedIcon/>
@@ -30,16 +37,19 @@ export default function NavBar(){
                     <input type="text" placeholder="Search..."/>
                 </div>
             </div>
+            <div className="center">
+            <p>AT SOCIAL</p>  
+            </div>
             <div className="right">
                 <PersonOutlinedIcon/>
                 <EmailOutlinedIcon/>
                 <NotificationsOutlinedIcon/>
-                <div className="user" onClick={handleIconClick}>
+                <div className="user" onClick={(event) => handleIconClick(event)}>
                     <AccountCircleIcon/>
                     <span>Aniket Thakre</span>
                 </div>
             </div>
-            {showOptions && <Logout/>}
+            {showOptions && <Logout position={position}/>}
         </div>
     )
 }

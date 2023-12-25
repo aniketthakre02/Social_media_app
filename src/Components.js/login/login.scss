@@ -58,6 +58,7 @@
             flex-direction: column;
             gap:50px;
             justify-content: center;
+            padding: 10px;
             h1{
                 color: #555;
             }
@@ -65,12 +66,19 @@
                 display: flex;
                 flex-direction: column;
                 gap:30px;
+                .hint{
+                    gap: 10px;
+                }
+                p{
+                    font-size: small;
+                    font-weight: lighter;
+                    color:rgb(92, 236, 76);
+                }
 
                 input{
                     border:none;
                     border-bottom: 1px solid lightgray;
                     padding:20px 10px;
-
                 }
             }
             button{

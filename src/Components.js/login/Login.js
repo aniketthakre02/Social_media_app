@@ -18,8 +18,14 @@ export default function Login(){
             <div className="right">
                 <h1>Login</h1>
                 <form>
+                    <div className="Hint">
                     <input type="text" placeholder="UserName"/>
+                    <p>Try... Aniket Thakre</p>
+                    </div>
+                    <div className="Hint">
                     <input type="text" placeholder="Password"/>
+                    <p>Abc@123</p>
+                    </div>
                 </form>
                 <Link to="/home">
                 <button>Login</button>
