@@ -1,11 +1,16 @@
-
+@import "../../style.scss";
 .stories {
   display: flex;
   gap: 10px;
   height: 250px;
   margin-bottom: 30px;
   padding:20px;
-
+    
+  @include mobile{
+    height: 50px;
+    justify-content: space-between;
+    width: fit-content;
+  }
   .story {
     flex: 1;
     border-radius: 10px;
@@ -13,6 +18,11 @@
     position: relative;
     border: 2px solid #000; 
     transition: transform 0.3s ease-out;
+    @include mobile{
+      flex:none;
+      width:50px;
+      border-radius: 50%;
+    }
     
     &:hover {
       transform: scale(1.05); // Increase the scale to make it pop out a little
@@ -29,6 +39,9 @@
       left: 10px;
       color: white;
       font-weight: 500;
+      @include mobile{
+        display: none;
+      }
      
     }
 
@@ -47,7 +60,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
+      @include mobile{
+        left:0;
+        right:0;
+        top:0;
+        bottom: 0;
+        margin:auto;
+      }
 
     }
   }

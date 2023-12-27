@@ -1,7 +1,37 @@
 import { Link } from "react-router-dom"
 import "./login.scss"
- 
+import { useFormik } from 'formik';
+
 export default function Login(){
+
+    function VerifyLoginDetails(loginDetails){
+        const errors={};
+        if(loginDetails.UserName==""){
+            errors.UserName="Fill Username"
+        }else if(loginDetails.UserName!="Aniket Thakre"){
+            errors.UserName="Use below as Username"
+        }
+        if(loginDetails.Password==""){
+            errors.Password="Fill Password"
+        }else if(loginDetails.Password!="Abc@123"){
+            errors.Password="Use below as Password (Must be same as below mention)"
+        }
+        return errors;
+    }
+
+
+    const formik=useFormik({
+        initialValues:{
+            UserName:'',
+            Password:''
+        },
+        validate:VerifyLoginDetails,
+        onSubmit:values=>{
+
+        }
+
+    })
+    
     return(
         <div className="login">
             <div className="card">
@@ -17,19 +47,26 @@ export default function Login(){
             </div>
             <div className="right">
                 <h1>Login</h1>
-                <form>
+                <form onSubmit={formik.handleSubmit}>
+                    <dl>
                     <div className="Hint">
-                    <input type="text" placeholder="UserName"/>
+                    <dt> User Name</dt>
+                    <input name="UserName" onChange={formik.handleChange}  value={formik.values.UserName} type="text" />
+                    <dd className="text-danger">{formik.errors.UserName}</dd>
                     <p>Try... Aniket Thakre</p>
                     </div>
                     <div className="Hint">
-                    <input type="text" placeholder="Password"/>
+                    <dt> Password</dt>
+                    <input name="Password" onChange={formik.handleChange}  value={formik.values.Password}  type="Password" />
+                    <dd className="text-danger">{formik.errors.Password}</dd>
                     <p>Abc@123</p>
                     </div>
-                </form>
+                    
                 <Link to="/home">
-                <button>Login</button>
+                <button type="submit" disabled={!formik.isValid}>Login</button>
                 </Link>
+                </dl>
+                </form>
             </div>
 
             </div>

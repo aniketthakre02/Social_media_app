@@ -41,9 +41,11 @@ export default function NavBar(){
             <p>AT SOCIAL</p>  
             </div>
             <div className="right">
+                <div className="icons">
                 <PersonOutlinedIcon/>
                 <EmailOutlinedIcon/>
                 <NotificationsOutlinedIcon/>
+                </div>
                 <div className="user" onClick={(event) => handleIconClick(event)}>
                     <AccountCircleIcon/>
                     <span>Aniket Thakre</span>

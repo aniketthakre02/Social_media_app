@@ -1,3 +1,4 @@
+@import "../../style.scss";
 .profile {
     background-color: #e6f7ff;
 
@@ -39,8 +40,8 @@
         -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
         box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
         border-radius: 20px;
-        background-color: themed("bg");
-        color: themed("textColor");
+        //background-color: themed("bg");
+       // color: themed("textColor");
         padding: 10px;
         display: flex;
         align-items: center;
@@ -49,6 +50,13 @@
         background-color:#e6f7ff;
         border: 2px solid white;
         margin-top: 15px;
+        @include mobile{
+          flex-direction: column;
+          height: 30vh;
+          padding: 20px;
+          margin-top: 100px;
+          width: auto;
+        }
 
         .left {
           flex: 1;
@@ -56,7 +64,7 @@
           gap: 10px;
 
           a{
-            color: themed("textColorSoft");
+            // color: themed("textColorSoft");
           }
         }
 
@@ -83,7 +91,7 @@
               display: flex;
               align-items: center;
               gap: 5px;
-              color: themed("textColorSoft");
+              // color: themed("textColorSoft");
 
               span {
                 font-size: 12px;

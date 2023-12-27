@@ -1,11 +1,13 @@
+import { ImageOutlined } from "@mui/icons-material";
 import "./logout.scss";
 import {useState} from "react";
 import {Link} from "react-router-dom";
 
+
 export default function Logout(){
     return(
         <div className="options-container">
-          {/* Add your options content here */}
+          
           <ul>
             <li className="VS">Visit Profile</li>
             <Link to="/">

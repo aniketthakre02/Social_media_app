@@ -1,3 +1,4 @@
+@import "../../style.scss";
 .navbar{
     display: flex;
     align-items: center;
@@ -28,7 +29,11 @@
                 border:none;
                 width: 170px;
                 background-color: transparent;
+                @include mobile{
+                    display: none;
+                  }
             }
+           
         }
         
     }
@@ -39,12 +44,21 @@
             font-weight:bold;
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            @include mobile{
+                display: none;    
+              }
 
     }
     .right{
         display: flex;
         align-items: center;
         gap:20px;
+        .icons{
+            @include mobile{
+                display: none;    
+              }
+        }
+        
         .user{
             display: flex;
             align-items: center;

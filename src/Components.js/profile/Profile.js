@@ -12,6 +12,7 @@ import Posts from "../../Components1.js/posts/Posts";
 import Profile from "../../assets/AniketProfile.jpg";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import {Link} from "react-router-dom";
+import MyProfile from "../myprofile/MyProfile";
 
 export default function profile(){
     return(
@@ -70,8 +71,9 @@ export default function profile(){
             <EmailOutlinedIcon />
             <MoreVertIcon />
           </div>
+          
         </div>
-      <Posts/>
+      <MyProfile/>
       </div>
     </div>
     )
