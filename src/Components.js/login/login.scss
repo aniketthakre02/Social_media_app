@@ -80,6 +80,10 @@
             gap:50px;
             justify-content: center;
             padding: 10px;
+            @include mobile{
+                padding: none;
+                gap:20px;
+            }
             h1{
                 color: #555;
             }

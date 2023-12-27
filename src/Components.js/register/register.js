@@ -47,7 +47,7 @@ export default function Register(){
                      </Link>
              </div>
              <div className="right">
-                <form>
+             <form>
                 <h1>Register</h1>
                <dl>
                 <input name="UserName" onChange={formik.handleChange} value={formik.values.UserName}  type="text" placeholder="Username"></input>
